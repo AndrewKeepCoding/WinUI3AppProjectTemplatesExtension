@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinUI3AppProjectTemplatesExtension", "WinUI3AppProjectTemplatesExtension\WinUI3AppProjectTemplatesExtension.csproj", "{1F1EC189-C251-421D-B0E4-3FF705F2FC58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F1EC189-C251-421D-B0E4-3FF705F2FC58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F1EC189-C251-421D-B0E4-3FF705F2FC58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F1EC189-C251-421D-B0E4-3FF705F2FC58}.Debug|x86.ActiveCfg = Debug|x86
+		{1F1EC189-C251-421D-B0E4-3FF705F2FC58}.Debug|x86.Build.0 = Debug|x86
+		{1F1EC189-C251-421D-B0E4-3FF705F2FC58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F1EC189-C251-421D-B0E4-3FF705F2FC58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F1EC189-C251-421D-B0E4-3FF705F2FC58}.Release|x86.ActiveCfg = Release|x86
+		{1F1EC189-C251-421D-B0E4-3FF705F2FC58}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F2D9FC39-1CEF-4B9E-9B86-9DD41B89EB56}
+	EndGlobalSection
+EndGlobal
