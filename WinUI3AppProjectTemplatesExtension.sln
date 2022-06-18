@@ -7,7 +7,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinUI3AppProjectTemplatesEx
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinUI3BlankAppProjectTemplate", "WinUI3BlankAppProjectTemplate\WinUI3BlankAppProjectTemplate.csproj", "{1137526F-7558-4101-94CF-A0773480D52A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinUI3BasicAppProjectTemplate", "WinUI3BasicAppProjectTemplate\WinUI3BasicAppProjectTemplate.csproj", "{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinUI3BasicAppProjectTemplate", "WinUI3BasicAppProjectTemplate\WinUI3BasicAppProjectTemplate.csproj", "{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{05EA0FD1-A66E-4768-8A4D-D20B43F8E900}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
