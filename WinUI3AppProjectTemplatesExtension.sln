@@ -5,7 +5,18 @@ VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinUI3AppProjectTemplatesExtension", "WinUI3AppProjectTemplatesExtension\WinUI3AppProjectTemplatesExtension.csproj", "{1F1EC189-C251-421D-B0E4-3FF705F2FC58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinUI3BlankAppProjectTemplate", "WinUI3BlankAppProjectTemplate\WinUI3BlankAppProjectTemplate.csproj", "{1137526F-7558-4101-94CF-A0773480D52A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinUI3BlankAppProjectTemplate", "WinUI3BlankAppProjectTemplate\WinUI3BlankAppProjectTemplate.csproj", "{1137526F-7558-4101-94CF-A0773480D52A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinUI3BasicAppProjectTemplate", "WinUI3BasicAppProjectTemplate\WinUI3BasicAppProjectTemplate.csproj", "{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{05EA0FD1-A66E-4768-8A4D-D20B43F8E900}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +70,30 @@ Global
 		{1137526F-7558-4101-94CF-A0773480D52A}.Release|x86.ActiveCfg = Release|x86
 		{1137526F-7558-4101-94CF-A0773480D52A}.Release|x86.Build.0 = Release|x86
 		{1137526F-7558-4101-94CF-A0773480D52A}.Release|x86.Deploy.0 = Release|x86
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Debug|Any CPU.Build.0 = Debug|x64
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Debug|Any CPU.Deploy.0 = Debug|x64
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Debug|arm64.ActiveCfg = Debug|arm64
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Debug|arm64.Build.0 = Debug|arm64
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Debug|arm64.Deploy.0 = Debug|arm64
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Debug|x64.ActiveCfg = Debug|x64
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Debug|x64.Build.0 = Debug|x64
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Debug|x64.Deploy.0 = Debug|x64
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Debug|x86.ActiveCfg = Debug|x86
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Debug|x86.Build.0 = Debug|x86
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Debug|x86.Deploy.0 = Debug|x86
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Release|Any CPU.ActiveCfg = Release|x64
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Release|Any CPU.Build.0 = Release|x64
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Release|Any CPU.Deploy.0 = Release|x64
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Release|arm64.ActiveCfg = Release|arm64
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Release|arm64.Build.0 = Release|arm64
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Release|arm64.Deploy.0 = Release|arm64
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Release|x64.ActiveCfg = Release|x64
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Release|x64.Build.0 = Release|x64
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Release|x64.Deploy.0 = Release|x64
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Release|x86.ActiveCfg = Release|x86
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Release|x86.Build.0 = Release|x86
+		{4AD44CFF-89DB-42DD-A26D-5E833AF147CA}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
