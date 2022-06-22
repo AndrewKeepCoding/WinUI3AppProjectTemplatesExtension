@@ -1,6 +1,7 @@
 using Microsoft.UI.Xaml;
 
 namespace WinUI3NavigationAppProjectTemplate.Interfaces;
+
 public interface IWindowingService
 {
     void Initialize(Window window);

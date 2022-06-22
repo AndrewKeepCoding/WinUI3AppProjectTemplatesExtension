@@ -2,6 +2,7 @@ using Windows.UI;
 using WinUI3NavigationAppProjectTemplate.Views;
 
 namespace WinUI3NavigationAppProjectTemplate.Interfaces;
+
 public interface IAppTitleBarService
 {
     void Initialize(AppTitleBar appTitleBar);

@@ -27,6 +27,16 @@ public class AppTitleBarService : IAppTitleBarService
     public void Initialize(AppTitleBar appTitleBar)
     {
         _appTitleBar = appTitleBar;
+
+        if (LoadBackgroundSettings() is Color background)
+        {
+            SetBackground(background);
+        }
+
+        if (LoadForegroundSettings() is Color foreground)
+        {
+            SetForeground(foreground);
+        }
     }
 
     public string? LoadTextSettings()

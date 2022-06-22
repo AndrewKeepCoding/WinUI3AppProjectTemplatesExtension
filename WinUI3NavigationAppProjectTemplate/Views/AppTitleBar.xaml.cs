@@ -3,6 +3,7 @@ using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media;
 
 namespace WinUI3NavigationAppProjectTemplate.Views;
+
 public sealed partial class AppTitleBar : UserControl
 {
     public static readonly DependencyProperty IconProperty =

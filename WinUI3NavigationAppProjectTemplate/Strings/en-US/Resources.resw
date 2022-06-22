@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppTitleBar.Text" xml:space="preserve">
-    <value>Happy coding!😎</value>
+    <value>WinUI 3 App</value>
   </data>
   <data name="en-US" xml:space="preserve">
     <value>English</value>
