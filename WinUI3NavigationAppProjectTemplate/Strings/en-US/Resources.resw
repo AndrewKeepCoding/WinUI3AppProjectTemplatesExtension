@@ -120,4 +120,64 @@
   <data name="AppTitleBar.Text" xml:space="preserve">
     <value>Happy coding!😎</value>
   </data>
+  <data name="en-US" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="es-ES" xml:space="preserve">
+    <value>Español</value>
+  </data>
+  <data name="ja" xml:space="preserve">
+    <value>日本語</value>
+  </data>
+  <data name="MainPage_Title.Text" xml:space="preserve">
+    <value>Main Page</value>
+  </data>
+  <data name="NavigationViewItem_Main.Content" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="NavigationViewItem_Settings.Content" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SettingsPage_ApplicationTheme.Header" xml:space="preserve">
+    <value>Application theme</value>
+  </data>
+  <data name="SettingsPage_ApplicationTheme_Dark.Content" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="SettingsPage_ApplicationTheme_Default.Content" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="SettingsPage_ApplicationTheme_Light.Content" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="SettingsPage_Localization.Header" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="SettingsPage_LocalizationChangedMessage.Text" xml:space="preserve">
+    <value>Application restart is required.</value>
+  </data>
+  <data name="SettingsPage_Title.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SettingsPage_TitleBar.Header" xml:space="preserve">
+    <value>Title bar</value>
+  </data>
+  <data name="SettingsPage_TitleBarBackground.Header" xml:space="preserve">
+    <value>Background</value>
+  </data>
+  <data name="SettingsPage_TitleBarForeground.Header" xml:space="preserve">
+    <value>Foreground</value>
+  </data>
+  <data name="SettingsPage_WindowHeight.Header" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="SettingsPage_WindowSize.Header" xml:space="preserve">
+    <value>Window size</value>
+  </data>
+  <data name="SettingsPage_WindowSizeApply.Content" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="SettingsPage_WindowWidth.Header" xml:space="preserve">
+    <value>Width</value>
+  </data>
 </root>

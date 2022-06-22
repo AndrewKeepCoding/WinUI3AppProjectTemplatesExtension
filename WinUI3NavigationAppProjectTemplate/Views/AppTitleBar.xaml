@@ -6,7 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Margin="0,0,120,0" ColumnDefinitions="Auto,*">
+    <Grid Background="{x:Bind Background, Mode=OneWay}" ColumnDefinitions="Auto,*">
         <Image
             Grid.Column="0"
             Width="{x:Bind IconWidth, Mode=OneWay}"

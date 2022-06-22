@@ -8,6 +8,7 @@ using WinUI3NavigationAppProjectTemplate.ViewModels;
 using WinUI3NavigationAppProjectTemplate.Views;
 
 namespace WinUI3NavigationAppProjectTemplate;
+
 public partial class App : Application
 {
     private readonly IHost _host;
@@ -40,8 +41,10 @@ public partial class App : Application
                 .AddSingleton<ILocalizationService, LocalizationService>()
                 .AddSingleton<IAppTitleBarService, AppTitleBarService>()
                 .AddSingleton<IWindowingService, WindowingService>()
+                .AddSingleton<INavigationViewService, NavigationViewService>()
                 .AddSingleton<IAppActivationService, AppActivationService>()
                 .AddSingleton<MainWindowViewModel>()
+                .AddSingleton<SettingsPageViewModel>()
                 .AddSingleton<MainPageViewModel>()
                 .AddSingleton<MainWindow>();
         })

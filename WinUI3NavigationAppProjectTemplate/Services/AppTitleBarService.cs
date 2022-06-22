@@ -4,6 +4,7 @@ using WinUI3NavigationAppProjectTemplate.Interfaces;
 using WinUI3NavigationAppProjectTemplate.Views;
 
 namespace WinUI3NavigationAppProjectTemplate.Services;
+
 public class AppTitleBarService : IAppTitleBarService
 {
     private readonly ISettingsService _settingsService;
@@ -26,6 +27,16 @@ public class AppTitleBarService : IAppTitleBarService
     public void Initialize(AppTitleBar appTitleBar)
     {
         _appTitleBar = appTitleBar;
+
+        if (LoadBackgroundSettings() is Color background)
+        {
+            SetBackground(background);
+        }
+
+        if (LoadForegroundSettings() is Color foreground)
+        {
+            SetForeground(foreground);
+        }
     }
 
     public string? LoadTextSettings()

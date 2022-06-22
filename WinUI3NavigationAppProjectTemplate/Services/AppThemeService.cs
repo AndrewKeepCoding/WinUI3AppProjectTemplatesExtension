@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using WinUI3NavigationAppProjectTemplate.Interfaces;
 
 namespace WinUI3NavigationAppProjectTemplate.Services;
+
 public class AppThemeService : IAppThemeService
 {
     private readonly ISettingsService _settingsService;
@@ -24,6 +25,9 @@ public class AppThemeService : IAppThemeService
     public void Initialize(FrameworkElement rootElement)
     {
         _rootElement = rootElement;
+
+        ElementTheme? theme = LoadThemeSettings();
+        SetTheme(theme is not null ? theme.Value : ElementTheme.Default);
     }
 
     public ElementTheme? LoadThemeSettings()
@@ -41,7 +45,7 @@ public class AppThemeService : IAppThemeService
 
     public bool SaveThemeSettings(ElementTheme theme)
     {
-        return _settingsService.TrySave(SettingsName, ThemeNameSettingsKey, theme.ToString());
+        return _settingsService.TrySave(SettingsName, ThemeNameSettingsKey, Enum.GetName(theme));
     }
 
     public ElementTheme? GetTheme()

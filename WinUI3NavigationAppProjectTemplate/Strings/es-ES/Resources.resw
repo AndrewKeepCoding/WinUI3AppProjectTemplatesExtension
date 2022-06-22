@@ -120,4 +120,64 @@
   <data name="AppTitleBar.Text" xml:space="preserve">
     <value>How do you say "Happy coding" in Spanish?😎</value>
   </data>
+  <data name="en-US" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="es-ES" xml:space="preserve">
+    <value>Español</value>
+  </data>
+  <data name="ja" xml:space="preserve">
+    <value>日本語</value>
+  </data>
+  <data name="MainPage_Title.Text" xml:space="preserve">
+    <value>Pagina Pricipal</value>
+  </data>
+  <data name="NavigationViewItem_Main.Content" xml:space="preserve">
+    <value>Principal</value>
+  </data>
+  <data name="NavigationViewItem_Settings.Content" xml:space="preserve">
+    <value>Configuración</value>
+  </data>
+  <data name="SettingsPage_ApplicationTheme.Header" xml:space="preserve">
+    <value>Tema de la aplicación</value>
+  </data>
+  <data name="SettingsPage_ApplicationTheme_Dark.Content" xml:space="preserve">
+    <value>Oscuro</value>
+  </data>
+  <data name="SettingsPage_ApplicationTheme_Default.Content" xml:space="preserve">
+    <value>Predeterminado</value>
+  </data>
+  <data name="SettingsPage_ApplicationTheme_Light.Content" xml:space="preserve">
+    <value>Claro</value>
+  </data>
+  <data name="SettingsPage_Localization.Header" xml:space="preserve">
+    <value>Lenguaje</value>
+  </data>
+  <data name="SettingsPage_LocalizationChangedMessage.Text" xml:space="preserve">
+    <value>Necesitas reiniciar la aplicación.</value>
+  </data>
+  <data name="SettingsPage_Title.Text" xml:space="preserve">
+    <value>Configuración</value>
+  </data>
+  <data name="SettingsPage_TitleBar.Header" xml:space="preserve">
+    <value>Barra de título</value>
+  </data>
+  <data name="SettingsPage_TitleBarBackground.Header" xml:space="preserve">
+    <value>Fondo</value>
+  </data>
+  <data name="SettingsPage_TitleBarForeground.Header" xml:space="preserve">
+    <value>Texto</value>
+  </data>
+  <data name="SettingsPage_WindowHeight.Header" xml:space="preserve">
+    <value>Alto</value>
+  </data>
+  <data name="SettingsPage_WindowSize.Header" xml:space="preserve">
+    <value>Tamaño de la ventana</value>
+  </data>
+  <data name="SettingsPage_WindowSizeApply.Content" xml:space="preserve">
+    <value>Aplicar</value>
+  </data>
+  <data name="SettingsPage_WindowWidth.Header" xml:space="preserve">
+    <value>Ancho</value>
+  </data>
 </root>

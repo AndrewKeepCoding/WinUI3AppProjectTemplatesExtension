@@ -1,13 +1,17 @@
 using Microsoft.UI.Xaml;
+using Windows.UI;
 using WinUI3NavigationAppProjectTemplate.Interfaces;
 using WinUI3NavigationAppProjectTemplate.Views;
 
 namespace WinUI3NavigationAppProjectTemplate.Services;
+
 public class AppActivationService : IAppActivationService
 {
     private readonly MainWindow _mainWindow;
     private readonly IWindowingService _windowingService;
     private readonly IAppTitleBarService _appTitleBarService;
+    private readonly INavigationViewService _navigationViewService;
+    private readonly ISettingsService _settingsService;
     private readonly IAppThemeService _appThemeService;
     private readonly ILocalizationService _localizationService;
 
@@ -15,6 +19,7 @@ public class AppActivationService : IAppActivationService
         MainWindow mainWindow,
         IWindowingService windowingService,
         IAppTitleBarService appTitleBarService,
+        INavigationViewService navigationViewService,
         ISettingsService settingsService,
         IAppThemeService appThemeService,
         ILocalizationService localizationService)
@@ -22,10 +27,10 @@ public class AppActivationService : IAppActivationService
         _mainWindow = mainWindow;
         _windowingService = windowingService;
         _appTitleBarService = appTitleBarService;
+        _navigationViewService = navigationViewService;
+        _settingsService = settingsService;
         _appThemeService = appThemeService;
         _localizationService = localizationService;
-
-        settingsService.RemoveAllSettings();
     }
 
     public void Activate(object activationArgs)
@@ -38,18 +43,15 @@ public class AppActivationService : IAppActivationService
     {
         _windowingService.Initialize(_mainWindow);
 
-        if (_windowingService.LoadWindowSizeSettings() is (int Width, int Height))
-
-            if (Width is not 0 && Height is not 0)
-            {
-                _windowingService.SetWindowSize(Width, Height);
-            }
-
         _appTitleBarService.Initialize(_mainWindow.TitleBar);
+
+        _navigationViewService.Initialize(_mainWindow.AppNavigationViewControl, _mainWindow.ContentFrameControl);
 
         if (_mainWindow.Content is FrameworkElement rootElement)
         {
             _appThemeService.Initialize(rootElement);
         }
+
+        _localizationService.Initialize();
     }
 }

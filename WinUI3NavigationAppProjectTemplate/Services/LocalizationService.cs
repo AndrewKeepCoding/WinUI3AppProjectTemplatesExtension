@@ -6,6 +6,7 @@ using Windows.Globalization;
 using WinUI3NavigationAppProjectTemplate.Interfaces;
 
 namespace WinUI3NavigationAppProjectTemplate.Services;
+
 public class LocalizationService : ILocalizationService
 {
     private readonly ResourceManager _resourceManager;
@@ -23,18 +24,27 @@ public class LocalizationService : ILocalizationService
 
     public string LanguageSettingsKey { get; set; } = "Language";
 
+    public string DefaultLanguage { get; set; } = "en-US";
+
     public IEnumerable<string> AvailableLanguages { get; }
 
-    public string GetLanguage()
+    public void Initialize()
     {
-        return ApplicationLanguages.PrimaryLanguageOverride;
+        string? language = GetLanguage();
+        SetLanguage(language is not null && IsAvailable(language) ? language : DefaultLanguage);
     }
 
-    /// <summary>
-    /// </summary>
-    /// <param name="language"></param>
-    /// <remarks>Restart the app to apply this change.</remarks>
-    /// <exception cref="InvalidLanguageException"></exception>
+    public bool IsAvailable(string language)
+    {
+        return AvailableLanguages.Contains(language);
+    }
+
+    public string? GetLanguage()
+    {
+        string language = ApplicationLanguages.PrimaryLanguageOverride;
+        return (IsAvailable(language) is true) ? language : null;
+    }
+
     public void SetLanguage(string language)
     {
         if (AvailableLanguages.Contains(language) is true)

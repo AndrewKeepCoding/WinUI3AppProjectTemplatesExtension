@@ -21,8 +21,24 @@
             TextFontSize="12"
             TextMargin="28,0,0,0"
             TextWrapping="NoWrap" />
-        <!--  App Body  -->
-        <views:MainPage Grid.Row="1" />
+        <!--  App NavigationView  -->
+        <NavigationView
+            x:Name="AppNavigationView"
+            Grid.Row="1"
+            AlwaysShowHeader="False"
+            IsBackEnabled="{x:Bind ContentFrame.CanGoBack, Mode=OneWay}"
+            IsSettingsVisible="True"
+            PaneDisplayMode="LeftCompact">
+            <NavigationView.MenuItems>
+                <NavigationViewItem
+                    x:Uid="NavigationViewItem_Main"
+                    Icon="Home"
+                    Tag="WinUI3NavigationAppProjectTemplate.Views.MainPage" />
+            </NavigationView.MenuItems>
+            <ScrollViewer>
+                <Frame x:Name="ContentFrame" />
+            </ScrollViewer>
+        </NavigationView>
     </Grid>
 
 </Window>

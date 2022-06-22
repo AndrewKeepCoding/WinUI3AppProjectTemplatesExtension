@@ -4,6 +4,7 @@ using WinUI3NavigationAppProjectTemplate.Helpers;
 using WinUI3NavigationAppProjectTemplate.Interfaces;
 
 namespace WinUI3NavigationAppProjectTemplate.Services;
+
 public class WindowingService : IWindowingService
 {
     private readonly ISettingsService _settingsService;
@@ -17,21 +18,28 @@ public class WindowingService : IWindowingService
 
     public string SettingsName { get; set; }
 
-    public string WindowSizeSettingsKey { get; set; } = "WindowSize";
+    public string WindowWidthSettingsKey { get; set; } = "WindowWidth";
+
+    public string WindowHeightSettingsKey { get; set; } = "WindowHeight";
 
     public string IsAlwaysOnTopSettingsKey { get; set; } = "IsAlwaysOnTop";
 
     public void Initialize(Window window)
     {
         _window = window;
+
+        if (LoadWindowSizeSettings() is (int Width, int Height) && Width > 0 && Height > 0)
+        {
+            SetWindowSize(Width, Height);
+        }
     }
 
     public (int Width, int Height)? LoadWindowSizeSettings()
     {
-        if (_settingsService.TryLoad(SettingsName, WindowSizeSettingsKey, out (int Width, int Height)? windowSize) is true &&
-            windowSize.HasValue is true)
+        if ((_settingsService.TryLoad(SettingsName, WindowWidthSettingsKey, out int width) is true &&
+            (_settingsService.TryLoad(SettingsName, WindowHeightSettingsKey, out int height) is true)))
         {
-            return (windowSize.Value.Width, windowSize.Value.Height);
+            return (width, height);
         }
 
         return null;
@@ -39,7 +47,9 @@ public class WindowingService : IWindowingService
 
     public bool SaveWindowSizeSettings(int width, int height)
     {
-        return _settingsService.TrySave(SettingsName, WindowSizeSettingsKey, (width, height));
+        return
+            _settingsService.TrySave(SettingsName, WindowWidthSettingsKey, width) &&
+            _settingsService.TrySave(SettingsName, WindowHeightSettingsKey, height);
     }
 
     public (int Width, int Height)? GetWindowSize()
