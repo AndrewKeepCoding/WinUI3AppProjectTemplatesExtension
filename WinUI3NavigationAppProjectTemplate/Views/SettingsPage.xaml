@@ -1,0 +1,124 @@
+<Page
+    x:Class="WinUI3NavigationAppProjectTemplate.Views.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converters="using:WinUI3NavigationAppProjectTemplate.Converters"
+    xmlns:toolkit="using:CommunityToolkit.WinUI.UI.Controls"
+    xmlns:viewmodels="using:WinUI3NavigationAppProjectTemplate.ViewModels"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded"
+    Style="{StaticResource CommonPageStyle}"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <Style TargetType="StackPanel">
+            <Setter Property="Spacing" Value="{StaticResource MediumSpacing}" />
+        </Style>
+        <Style TargetType="toolkit:ColorPickerButton">
+            <Setter Property="Margin" Value="{StaticResource SmallTopBottomMargin}" />
+        </Style>
+        <converters:EnumToBoolConverter x:Key="EnumToBoolConverter" />
+        <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+    </Page.Resources>
+
+    <Grid Style="{StaticResource PageBodyGridStyle}">
+        <StackPanel Margin="{StaticResource MediumMargin}" Orientation="Vertical">
+
+            <!--  Title  -->
+            <TextBlock x:Uid="SettingsPage_Title" Style="{ThemeResource TitleTextBlockStyle}" />
+
+            <!--  Application Theme  -->
+            <toolkit:HeaderedContentControl x:Uid="SettingsPage_ApplicationTheme" Style="{StaticResource MainHeaderStyle}">
+                <RadioButtons MaxColumns="3">
+                    <RadioButton
+                        x:Uid="SettingsPage_ApplicationTheme_Default"
+                        Command="{x:Bind ViewModel.ChangeThemeCommand}"
+                        CommandParameter="Default"
+                        GroupName="AppTheme"
+                        IsChecked="{x:Bind ViewModel.AppTheme.Theme, Converter={StaticResource EnumToBoolConverter}, ConverterParameter=Default, Mode=OneWay}" />
+                    <RadioButton
+                        x:Uid="SettingsPage_ApplicationTheme_Light"
+                        Command="{x:Bind ViewModel.ChangeThemeCommand}"
+                        CommandParameter="Light"
+                        GroupName="AppTheme"
+                        IsChecked="{x:Bind ViewModel.AppTheme.Theme, Converter={StaticResource EnumToBoolConverter}, ConverterParameter=Light, Mode=OneWay}" />
+                    <RadioButton
+                        x:Uid="SettingsPage_ApplicationTheme_Dark"
+                        Command="{x:Bind ViewModel.ChangeThemeCommand}"
+                        CommandParameter="Dark"
+                        GroupName="AppTheme"
+                        IsChecked="{x:Bind ViewModel.AppTheme.Theme, Converter={StaticResource EnumToBoolConverter}, ConverterParameter=Dark, Mode=OneWay}" />
+                </RadioButtons>
+            </toolkit:HeaderedContentControl>
+
+            <!--  Window Size  -->
+            <toolkit:HeaderedContentControl x:Uid="SettingsPage_WindowSize" Style="{StaticResource MainHeaderStyle}">
+                <StackPanel Orientation="Horizontal">
+                    <toolkit:HeaderedContentControl x:Uid="SettingsPage_WindowWidth" Style="{StaticResource SubHeaderStyle}">
+                        <TextBox Text="{x:Bind ViewModel.WindowWidth, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" TextAlignment="Right" />
+                    </toolkit:HeaderedContentControl>
+                    <toolkit:HeaderedContentControl x:Uid="SettingsPage_WindowHeight" Style="{StaticResource SubHeaderStyle}">
+                        <TextBox Text="{x:Bind ViewModel.WindowHeight, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" TextAlignment="Right" />
+                    </toolkit:HeaderedContentControl>
+                    <Button
+                        x:Uid="SettingsPage_WindowSizeApply"
+                        VerticalAlignment="Bottom"
+                        Command="{x:Bind ViewModel.UpdateWindowSizeCommand}"
+                        Style="{ThemeResource AccentButtonStyle}" />
+                </StackPanel>
+            </toolkit:HeaderedContentControl>
+
+            <!--  Title Bar  -->
+            <toolkit:HeaderedContentControl x:Uid="SettingsPage_TitleBar" Style="{StaticResource MainHeaderStyle}">
+                <StackPanel Orientation="Horizontal">
+                    <toolkit:HeaderedContentControl x:Uid="SettingsPage_TitleBarForeground" Style="{StaticResource SubHeaderStyle}">
+                        <toolkit:ColorPickerButton SelectedColor="{x:Bind ViewModel.TitleBarForeground, Mode=TwoWay}" />
+                    </toolkit:HeaderedContentControl>
+                    <toolkit:HeaderedContentControl x:Uid="SettingsPage_TitleBarBackground" Style="{StaticResource SubHeaderStyle}">
+                        <toolkit:ColorPickerButton SelectedColor="{x:Bind ViewModel.TitleBarBackground, Mode=TwoWay}" />
+                    </toolkit:HeaderedContentControl>
+                </StackPanel>
+            </toolkit:HeaderedContentControl>
+
+            <!--  Localization  -->
+            <toolkit:HeaderedContentControl x:Uid="SettingsPage_Localization" Style="{StaticResource MainHeaderStyle}">
+                <StackPanel Margin="{StaticResource SmallTopBottomMargin}" Orientation="Horizontal">
+                    <Button x:Name="LanguageButton" Content="{x:Bind ViewModel.Language.DisplayName, Mode=OneWay}">
+                        <Button.Flyout>
+                            <Flyout>
+                                <GridView
+                                    x:Name="LanguageGridView"
+                                    Padding="0"
+                                    ItemsSource="{x:Bind ViewModel.AvailableLanguages, Mode=OneWay}"
+                                    SelectedItem="{x:Bind ViewModel.Language, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                    SelectionChanged="LanguageGridView_SelectionChanged"
+                                    SelectionMode="Single"
+                                    SingleSelectionFollowsFocus="False">
+                                    <GridView.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <ItemsStackPanel Orientation="Horizontal" />
+                                        </ItemsPanelTemplate>
+                                    </GridView.ItemsPanel>
+                                    <GridView.ItemTemplate>
+                                        <DataTemplate x:DataType="viewmodels:LanguageViewModel">
+                                            <TextBlock Margin="{StaticResource SmallLeftRightMargin}" Text="{x:Bind DisplayName}" />
+                                        </DataTemplate>
+                                    </GridView.ItemTemplate>
+                                </GridView>
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
+                    <TextBlock
+                        x:Uid="SettingsPage_LocalizationChangedMessage"
+                        VerticalAlignment="Center"
+                        Foreground="Red"
+                        Visibility="{x:Bind ViewModel.IsLocalizationChanged, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}" />
+                </StackPanel>
+            </toolkit:HeaderedContentControl>
+
+        </StackPanel>
+    </Grid>
+    
+</Page>
