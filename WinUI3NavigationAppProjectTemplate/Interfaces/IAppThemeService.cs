@@ -2,6 +2,7 @@ using Microsoft.UI.Xaml;
 using System.Collections.Generic;
 
 namespace WinUI3NavigationAppProjectTemplate.Interfaces;
+
 public interface IAppThemeService
 {
     IEnumerable<ElementTheme> AvailableThemes { get; }
