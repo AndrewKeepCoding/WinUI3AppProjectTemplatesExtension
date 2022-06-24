@@ -1,5 +1,4 @@
 using Microsoft.UI.Xaml;
-using Windows.UI;
 using WinUI3NavigationAppProjectTemplate.Interfaces;
 using WinUI3NavigationAppProjectTemplate.Views;
 
