@@ -1,4 +1,4 @@
-# 🪟WinUI 3 App Project Templates Extension
+# 📒WinUI 3 App Project Templates Extension
 
 ## 📝Project Templates
 
