@@ -39,9 +39,6 @@ This extension installs 3 types of project templates to Visual Studio 2022.
 - Microsoft.Extensions.Hosting
 
 ## 🎬YouTube
-Playlist: 
-https://www.youtube.com/playlist?list=PLWyJQIhN3vyOjJAdrURtKL7zDHFojN1sD
-Part 1: Blank App | VSIX
-https://www.youtube.com/watch?v=Z7mA8wCXWWI&t=256s
-Part 2: Basic App | Navigation App | Visual Studio Marketplace
-https://www.youtube.com/watch?v=nKguHB3LD9A
+- [Playlist](https://www.youtube.com/playlist?list=PLWyJQIhN3vyOjJAdrURtKL7zDHFojN1sD)
+- [Part 1: Blank App | VSIX](https://www.youtube.com/watch?v=Z7mA8wCXWWI&t=256s)
+- [Part 2: Basic App | Navigation App | Visual Studio Marketplace](https://www.youtube.com/watch?v=nKguHB3LD9A)
