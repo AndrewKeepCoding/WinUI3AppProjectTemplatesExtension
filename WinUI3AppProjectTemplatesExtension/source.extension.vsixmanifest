@@ -7,7 +7,7 @@
         <MoreInfo>https://github.com/AndrewKeepCoding/WinUI3AppProjectTemplatesExtension</MoreInfo>
         <License>LICENSE.txt</License>
         <Icon>WinUI3Icon.png</Icon>
-        <Tags>WinUI 3, WinUI3, WinAppSDK, MVVM, Desktop</Tags>
+        <Tags>WinUI 3, WinUI3, Windows App SDK, WinAppSDK, MVVM, Desktop</Tags>
         <Preview>true</Preview>
     </Metadata>
     <Installation>
@@ -21,6 +21,7 @@
     <Assets>
         <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\WinUI 3 Blank App Project Template.zip" />
         <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\WinUI 3 Basic App Project Template.zip" />
+        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\WinUI 3 Navigation App Project Template.zip" />
     </Assets>
     <Prerequisites>
         <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />

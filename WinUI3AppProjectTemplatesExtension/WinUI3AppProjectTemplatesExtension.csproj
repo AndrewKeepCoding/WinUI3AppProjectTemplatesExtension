@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\navigation-app-screenshot.png" />
+    <Content Include="Assets\winui3.png" />
     <Content Include="LICENSE.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -56,11 +57,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Assets\WinUI3Icon.png">
+    <Content Include="ProjectTemplates\WinUI 3 Basic App Project Template.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="ProjectTemplates\WinUI 3 Basic App Project Template.zip">
+    <Content Include="ProjectTemplates\WinUI 3 Navigation App Project Template.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
